@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --color-foundry-navy: #0A0F1E;
+  --color-solar-gold: #FACC15;
+  --color-hyper-emerald: #10B981;
+  --color-foundry-slate: #64748B;
+  --color-foundry-light: #F8FAFC;
+
+  --font-outfit: "Outfit", sans-serif;
+  --font-inter: "Inter", sans-serif;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from { height: 0; }
+    to { height: var(--radix-accordion-content-height); }
+  }
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height); }
+    to { height: 0; }
+  }
+}
+
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-foundry-slate) / 0.1;
+  }
+  
+  body {
+    background-color: var(--color-foundry-light);
+    color: var(--color-foundry-navy);
+    font-family: var(--font-inter);
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-outfit);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+}
