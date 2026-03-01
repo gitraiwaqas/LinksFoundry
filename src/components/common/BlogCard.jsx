@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-export default function BlogCard({ title, excerpt, date, category, slug, index }) {
+export default function BlogCard({ title, excerpt, date, category, slug, image, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -15,7 +15,15 @@ export default function BlogCard({ title, excerpt, date, category, slug, index }
           <div className="absolute top-4 left-4 bg-foundry-navy text-white text-[10px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full z-10">
             {category}
           </div>
-          <div className="w-full h-full bg-[#334155] group-hover:scale-105 transition-transform duration-700 opacity-20" />
+          {image ? (
+            <img 
+              src={image} 
+              alt={title} 
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+            />
+          ) : (
+            <div className="w-full h-full bg-[#334155] group-hover:scale-105 transition-transform duration-700 opacity-20" />
+          )}
         </div>
       </Link>
       <div className="p-8">

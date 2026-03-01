@@ -35,16 +35,18 @@ export default function HomePage() {
               transition={{ delay: 0.1 }}
               className="text-5xl md:text-7xl lg:text-8xl font-outfit font-black text-foundry-navy leading-[0.9] tracking-tight mb-8"
             >
-              Build Authority <br/> <span className="text-solar-gold italic">That Lasts.</span>
+              Strategic <br/> <span className="text-solar-gold italic">Link Building Services</span> in the US and UK
             </motion.h1>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl text-foundry-slate font-inter max-w-2xl mb-12 leading-relaxed"
+              className="text-xl md:text-2xl text-foundry-slate font-inter max-w-3xl mb-12 leading-relaxed"
             >
-              Premium white-hat link building for ambitious brands. We don't just build links; we architect the foundation of your digital authority.
+              High-quality backlinks are one of the top ranking factors for Google and give it confidence to rank a website higher. This is the reason 92.3% of pages ranking higher on Google have at least 1 backlink from a relevant and trustworthy site. 
+              <br /><br />
+              Consider our personalized link-building services in the US and the UK that help your online business gain visibility across search engines, LLMs, and AI platforms such as AI Overviews, chatbot recommendations, and Perplexity AI.
             </motion.p>
             
             <motion.div
@@ -55,7 +57,7 @@ export default function HomePage() {
             >
               <Link to="/contact">
                 <Button size="lg" className="w-full sm:w-auto px-10 py-5 text-lg cursor-pointer">
-                  Get a Free Strategy Audit
+                  Get Your Free Quote Instantly
                 </Button>
               </Link>
               <Link to="/case-studies">
@@ -85,8 +87,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeading 
             subtitle="Expertise"
-            title="Our Link Building Arsenal"
-            description="We deploy cross-channel link building strategies that satisfy search engine algorithms and human readers alike."
+            title="High-Impact Link Building Services That Give You Organic Rankings"
+            description="LinksFoundry offers you comprehensive backlink building services, which help you dominate the SERP, outranking all of your competitors."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, i) => (
@@ -106,8 +108,8 @@ export default function HomePage() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeading 
             subtitle="Case Studies"
-            title="Results That Speak Volumes"
-            description="Real growth stories from our clients across diverse industries. We focus on ROI, not just metrics."
+            title="Brands That Skyrocketed After Working With Us"
+            description="Our link-building agency has helped several brands become an authority in their niche, increase their traffic, and improve their domain ratings organically."
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {caseStudies.map((cs, i) => (
@@ -162,18 +164,18 @@ export default function HomePage() {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="max-w-3xl mx-auto"
+            className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md:text-6xl font-outfit font-black text-white mb-8 leading-tight">
-              Ready to Build Your <br/> <span className="text-solar-gold">Digital Foundry?</span>
+              Rank Your Website Today With <br/> <span className="text-solar-gold">Expert Link Building Services In The US and UK</span>
             </h2>
             <p className="text-xl text-slate-300 font-inter mb-12">
-              Join 1,200+ brands that have scaled their organic growth with our premium link building strategies.
+              Do you want to rank your site, maintain its stable rankings, and get consistent traffic? Get our personalized link-building services that include digital PR, brand mentions, editorial backlinks, and niche guest posts.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <Link to="/contact">
                 <Button size="lg" className="px-12 py-6 text-xl">
-                  Schedule Your Free Call
+                  Get Started Now
                 </Button>
               </Link>
               <Link to="/pricing">

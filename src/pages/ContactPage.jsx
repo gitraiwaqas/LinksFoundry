@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
+import { useState } from "react";
 import { HiMail, HiPhone, HiLocationMarker, HiClock, HiChatAlt2, HiBadgeCheck } from "react-icons/hi";
 import SectionHeading from "../components/common/SectionHeading";
 import Button from "../components/ui/Button";
@@ -24,12 +25,37 @@ export default function ContactPage() {
     resolver: zodResolver(contactSchema),
   });
 
+  const [status, setStatus] = useState(null);
+
   const onSubmit = async (data) => {
-    // Simulate API call
-    console.log("Form Data:", data);
-    await new Promise((resolve) => setTimeout(resolve, 2000));
-    alert("Strategy request sent! We will contact you within 24 hours.");
-    reset();
+    try {
+      setStatus("sending");
+      
+      const response = await fetch("https://formspree.io/f/mpqjebvd", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          ...data,
+          _to: "sadi@linksfoundry.com", // This helps Formspree routing if configured
+          _subject: `New Strategy Request from ${data.name} (${data.company})`
+        })
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        alert("Strategy request sent! Sadi will contact you within 24 hours.");
+        reset();
+      } else {
+        setStatus("error");
+        alert("Oops! There was a problem sending your request. Please try again or email us directly.");
+      }
+    } catch (error) {
+      setStatus("error");
+      alert("Network error. Please check your connection and try again.");
+    }
   };
 
   return (
@@ -135,7 +161,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                            <div className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">Email Us</div>
-                           <div className="font-outfit font-bold text-lg">hello@linksfoundry.com</div>
+                           <div className="font-outfit font-bold text-lg">sadi@linksfoundry.com</div>
                         </div>
                      </div>
                      
@@ -155,7 +181,7 @@ export default function ContactPage() {
                         </div>
                         <div>
                            <div className="text-xs font-black uppercase tracking-widest text-slate-500 mb-1">HQ Location</div>
-                           <div className="font-outfit font-bold text-lg leading-snug">Raiwind Rd, Lahore <br/>Pakistan</div>
+                           <div className="font-outfit font-bold text-lg leading-snug">New York <br/>United States</div>
                         </div>
                      </div>
 

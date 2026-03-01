@@ -7,42 +7,43 @@ import Button from "../components/ui/Button";
 
 const pricingTiers = [
   {
-    tier: "Starter Bundle",
+    tier: "Basic Bundle",
     price: "$1,500",
-    description: "Perfect for small businesses starting their SEO journey.",
+    description: "Ideal for small businesses focused on growing their local or niche rankings.",
     features: [
-      "5 High-Quality Backlinks",
-      "DR 30+ Guarantee",
-      "Niche-Relevant Outreach",
-      "Monthly Growth Report",
-      "3 Business Day Support"
+      "5–7 Monthly Links",
+      "Min. DR 30+",
+      "Niche-Relevant Content",
+      "Editorial Guarantee",
+      "Strategic Link Integration"
     ]
   },
   {
-    tier: "Growth Authority",
+    tier: "Professional Authority",
     price: "$3,500",
-    description: "Fuel your expansion with aggressive link building.",
+    description: "Fuel your expansion with aggressive, high-authority link building.",
     popular: true,
     features: [
-      "15 Premium Backlinks",
-      "DR 50+ Guarantee",
-      "Digital PR Mention (1/mo)",
+      "15–20 Monthly Links",
+      "Min. DR 50+",
+      "Niche-Relevant Content",
       "Competitor Gap Analysis",
-      "Dedicated Strategist",
-      "Priority Fulfillment"
+      "Dedicated Account Manager",
+      "Editorial Guarantee"
     ]
   },
   {
     tier: "Enterprise Scale",
     price: "Custom",
-    description: "Full-service authority building at global scale.",
+    description: "Full-service authority building at a global or large-scale enterprise level.",
     features: [
-      "Unlimited Link Volume",
-      "DR 70+ Targeted Outreach",
-      "Full Digital PR Campaigns",
-      "White-Label Options",
-      "24/7 Priority Support",
-      "API & Custom Reporting"
+      "50+ Monthly Links",
+      "Min. DR 70+",
+      "Niche-Relevant Content",
+      "Competitor Gap Analysis",
+      "Dedicated Manager",
+      "Real-Time Reporting",
+      "Editorial Guarantee"
     ]
   }
 ];

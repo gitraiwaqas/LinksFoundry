@@ -26,27 +26,6 @@ const values = [
   }
 ];
 
-const team = [
-  {
-    name: "Waqas Rai",
-    role: "Founder & Lead Strategist",
-    bio: "Link building veteran with 10+ years of experience helping SaaS and eCommerce brands scale globally.",
-    photo: "WR"
-  },
-  {
-    name: "Emma Thorne",
-    role: "Head of Digital PR",
-    bio: "Former journalist who knows exactly what it takes to get national news outlets talking about your brand.",
-    photo: "ET"
-  },
-  {
-    name: "Ahmadi K.",
-    role: "Outreach Director",
-    bio: "Master of relationship building, maintaining a network of 5,000+ high-tier editorial contacts across US/UK.",
-    photo: "AK"
-  }
-];
-
 export default function AboutPage() {
   return (
     <div className="pt-24 bg-white">
@@ -55,8 +34,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeading 
             subtitle="Our Story"
-            title="The Team Behind Your SEO Success"
-            description="Since 2015, LinksFoundry has been at the forefront of the link building revolution, bridging the gap between Pakistan's talent and the UK/US markets."
+            title="Indestructible Organic Authority"
+            description="Since 2015, LinksFoundry has been at the forefront of the link building revolution, bridging the gap between global brands and high-tier digital authority."
           />
         </div>
       </section>
@@ -72,7 +51,7 @@ export default function AboutPage() {
                <div className="space-y-6 text-lg text-foundry-slate font-inter leading-relaxed">
                   <p>In a world saturated with spammy outreach and automated link farms, we saw an opportunity to build something different. Something lasting.</p>
                   <p>LinksFoundry was born out of a desire to provide top-tier SEO agencies in London and New York with a fulfillment partner they could actually trust. We spent years building genuine relationships with editors, journalists, and site owners.</p>
-                  <p>Today, we're a team of link building specialists, PR experts, and data analysts dedicated to help your brand achieve indestructible organic authority.</p>
+                  <p>Today, LinksFoundry is a network of link building specialists, PR experts, and data analysts dedicated to help your brand achieve indestructible organic authority.</p>
                </div>
             </div>
             <div className="flex-1 w-full bg-foundry-navy aspect-4/3 rounded-[3rem] relative overflow-hidden group">
@@ -117,46 +96,11 @@ export default function AboutPage() {
          </div>
       </section>
 
-      {/* Team Profiles */}
-      <section className="py-32">
-         <div className="container mx-auto px-4 md:px-6">
-            <SectionHeading 
-              subtitle="The Experts"
-              title="Meet the Strategists"
-              description="Our diverse team brings together creativity, technical SEO knowledge, and old-school relationship building."
-            />
-            <div className="grid md:grid-cols-3 gap-12">
-               {team.map((m, i) => (
-                 <motion.div
-                   key={i}
-                   initial={{ opacity: 0, y: 20 }}
-                   whileInView={{ opacity: 1, y: 0 }}
-                   viewport={{ once: true }}
-                   transition={{ delay: i * 0.1 }}
-                   className="group"
-                 >
-                   <div className="aspect-3/4 bg-foundry-light rounded-[2.5rem] mb-6 overflow-hidden relative">
-                      <div className="absolute inset-0 bg-[#cbd5e1] group-hover:scale-110 transition-transform duration-700 opacity-20" />
-                      <div className="absolute inset-0 flex items-center justify-center text-4xl font-outfit font-black text-slate-300">
-                        {m.photo}
-                      </div>
-                   </div>
-                   <h3 className="text-2xl font-outfit font-bold text-foundry-navy mb-1">{m.name}</h3>
-                   <p className="text-solar-gold font-outfit font-bold text-sm uppercase tracking-widest mb-4">{m.role}</p>
-                   <p className="text-foundry-slate font-inter text-sm leading-relaxed">
-                     {m.bio}
-                   </p>
-                 </motion.div>
-               ))}
-            </div>
-         </div>
-      </section>
-
       {/* Call to Action */}
       <section className="py-24 bg-foundry-light">
          <div className="container mx-auto px-4 md:px-6 text-center">
             <h2 className="text-3xl font-outfit font-bold text-foundry-navy mb-8">Want to work with a partner who cares about your growth?</h2>
-            <Button size="lg" variant="primary">Join the Foundry Family</Button>
+            <Button size="lg" variant="primary">Talk to an Expert</Button>
          </div>
       </section>
     </div>

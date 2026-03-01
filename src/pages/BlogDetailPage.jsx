@@ -58,10 +58,20 @@ export default function BlogDetailPage() {
 
           {/* Hero Image / Placeholder */}
           <div className="aspect-video bg-foundry-light rounded-[3rem] overflow-hidden mb-16 relative border border-slate-100 shadow-2xl">
-            <div className="absolute inset-0 bg-[#334155] opacity-10" />
-            <div className="absolute inset-0 flex items-center justify-center font-outfit text-foundry-navy opacity-20 text-4xl font-black italic">
-              LINKSFOUNDRY INSIGHTS
-            </div>
+            {post.image ? (
+              <img 
+                src={post.image} 
+                alt={post.title} 
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <>
+                <div className="absolute inset-0 bg-[#334155] opacity-10" />
+                <div className="absolute inset-0 flex items-center justify-center font-outfit text-foundry-navy opacity-20 text-4xl font-black italic">
+                  LINKSFOUNDRY INSIGHTS
+                </div>
+              </>
+            )}
           </div>
 
           {/* Content */}

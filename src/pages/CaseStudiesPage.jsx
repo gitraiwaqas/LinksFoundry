@@ -22,8 +22,8 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-4 md:px-6">
           <SectionHeading 
             subtitle="Our Impact"
-            title="Proven Results That Speak for Themselves"
-            description="We've helped hundreds of brands dominate their search landscape through data-driven, creative link building campaigns. Here's a look at some of our favorites."
+            title="Real Results: Brands That Skyrocketed After Working With Us"
+            description="Our link-building agency has helped several brands become an authority in their niche, increase their traffic, and improve their domain ratings organically."
           />
 
           {/* Filters */}

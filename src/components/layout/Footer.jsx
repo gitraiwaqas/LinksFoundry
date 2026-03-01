@@ -33,6 +33,13 @@ const footerLinks = [
   },
 ];
 
+const socialLinks = [
+  { icon: FaLinkedin, href: "https://www.linkedin.com/company/links-foundry/" },
+  { icon: FaTwitter, href: "https://x.com/linksfoundry" },
+  { icon: FaInstagram, href: "https://www.instagram.com/linksfoundry/" },
+  { icon: FaFacebook, href: "https://www.facebook.com/linksfoundry" },
+];
+
 export default function Footer() {
   return (
     <footer className="bg-foundry-navy text-slate-400 py-16 border-t border-white/5">
@@ -52,13 +59,15 @@ export default function Footer() {
               Premium, white-hat link building agency helping UK and US brands build authority and drive long-term organic growth since 2015.
             </p>
             <div className="flex gap-4">
-              {[FaLinkedin, FaTwitter, FaInstagram, FaFacebook].map((Icon, i) => (
+              {socialLinks.map((social, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-solar-gold hover:text-foundry-navy hover:border-solar-gold transition-all duration-300"
                 >
-                  <Icon size={18} />
+                  <social.icon size={18} />
                 </a>
               ))}
             </div>

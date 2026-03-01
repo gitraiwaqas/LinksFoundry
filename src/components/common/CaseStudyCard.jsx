@@ -10,17 +10,25 @@ export default function CaseStudyCard({ client, industry, results, image, index 
       transition={{ delay: index * 0.1 }}
       className="group relative overflow-hidden rounded-3xl bg-foundry-navy aspect-4/5 md:aspect-3/4"
     >
-      {/* Background Image Placeholder / Gradient */}
-      <div className="absolute inset-0 bg-linear-to-t from-foundry-navy via-foundry-navy/40 to-transparent z-10" />
-      <div className="absolute inset-0 bg-[#1e293b] group-hover:scale-110 transition-transform duration-700">
-        {/* Real image would go here */}
-        <div className="w-full h-full flex items-center justify-center opacity-20">
-           {/* placeholder for design */}
-           <div className="w-20 h-20 border-2 border-dashed border-white rounded-full flex items-center justify-center">
-             <span className="text-white text-xs">GFX</span>
-           </div>
-        </div>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        {image ? (
+          <img 
+            src={image} 
+            alt={client} 
+            className="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-transform duration-700"
+          />
+        ) : (
+          <div className="w-full h-full bg-[#1e293b] flex items-center justify-center opacity-20">
+             <div className="w-20 h-20 border-2 border-dashed border-white rounded-full flex items-center justify-center">
+               <span className="text-white text-xs">GFX</span>
+             </div>
+          </div>
+        )}
       </div>
+      
+      {/* Gradient Overlay */}
+      <div className="absolute inset-0 bg-linear-to-t from-foundry-navy via-foundry-navy/40 to-transparent z-10" />
 
       {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
